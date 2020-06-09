@@ -1,27 +1,38 @@
-import React from 'react';
+import React,{useState} from 'react';
 import Cards from '../Cards/Cards';
-function Home() {
+import './home.css';
+const Home = function Home() {
   const navList = ['热门','最新','热榜'];
-  const data = JSON.stringify([{label:"广告",author:"sags",time:"1天谴",title:"啥萨嘎金安国纪啊"},{label:"广告",author:"sags",time:"1天谴",title:"啥萨嘎金安国纪啊"},{label:"广告",author:"sag",time:"1天谴",title:"啥萨嘎金安国纪啊"}])
+  const [idx, setIdx] = useState(0);
+  const data = JSON.stringify(
+    [{label:"广告",author:"mike",time:"1天谴",title:"啥萨嘎金安国纪啊",id:0,zan:252,noZan:30},
+    {label:"广告",author:"dock",time:"1天谴",title:"啥萨嘎金安国纪啊",id:1,zan:263,noZan:40},
+    {label:"广告",author:"bob",time:"1天谴",title:"啥萨嘎金安国纪啊",id:2,zan:270,noZan:50}]
+    )
   const data1 = '{"age":24,"name":"sga"}'
   const blue = 'blue'
-  const listItems = navList.map((item) =>
-    <li onClick="navClick">{item}</li>
+  const listItems = navList.map((item,index) =>
+    <li onClick={navClick.bind(this)} key={index} className={idx == index ? 'active' : ''} data-index={index}>
+      {item}
+    </li>
+    
   );
   function navClick(ev){
-    console.log(ev)
+    const index =ev.currentTarget.dataset.index;
+    setIdx(ev.currentTarget.dataset.index)
   }
   window.onLoad = function(){
     var XML = new XMLHttpRequest();
   }
     return (
       <div className="Home">
+        <div className="home-wrap">
           <div className="left-content">
-              <nav>
-                <ul className="nav-list">
-                    <list-items></list-items>
-                </ul> 
-              </nav>
+            <>
+              <ul className="nav-list">
+                  {listItems}
+              </ul> 
+            </>
               <Cards data={data} />
           </div>
           <div className="right-content">
@@ -37,8 +48,9 @@ function Home() {
               </form>
               <div className="advertise">广告栏</div>
           </div>
+        </div>
       </div>
     );
   }
-
+  //ReactDOM.render(Home,document.getElementById('root'))
   export default Home

@@ -1,6 +1,11 @@
 .clsActive{
     color:#99ccff;
   }
+  
+  .nav-text-wrap{
+      width:100%;
+      border-bottom:1px solid #ccc;
+  }
   .logo-wrap {
     width: 963px;
     margin: 0 auto;

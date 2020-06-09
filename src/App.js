@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './components/Header/Header';
+//import Home from './components/Home/Home';
 /* import Activity from './components/Activity/Activity';
 import Books from './components/Books/Books';
 import Pins from './components/Pins/Pins';
