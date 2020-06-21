@@ -8,7 +8,6 @@ import Books from '../Books/Books';
 import Pins from '../Pins/Pins';
 import Topics from '../Topics/Topics';
 import Home from '../Home/Home';
-import SearchBar from '../SearchBar/SearchBar'
 
 //导航栏头部
 
@@ -71,20 +70,6 @@ class Header extends Component {
                       </NavLink>
                     </li>
                   </ul>
-<<<<<<< HEAD
-=======
-                  <SearchBar></SearchBar>
-                  <ul className="right">
-                      <li className="">
-                        <img src={require('../../images/submit-icon.53f4253.svg')} alt="submit"/>
-                        <span>写文章</span>
-                      </li>
-                      <li className="">
-                        <span>登录</span>
-                        <span>注册</span>
-                      </li>
-                  </ul>
->>>>>>> fdbfc1cc2255b60b09025222831f6bc5cbbd7260
                 </div>
                 <div className="content">
                   <Route path='/' component={Home} exact/>

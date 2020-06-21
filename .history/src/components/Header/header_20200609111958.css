@@ -42,7 +42,7 @@ a:hover{
 .right{
     float:left;
     margin-left:33px;
-    color:#0280ff;
+
 }
 .right li {
     float:left;
@@ -61,9 +61,8 @@ a:hover{
     left:100%;
     color:hsla(0,0%,59.2%,.4);
 }
-.right li:nth-child(2) span:first-child::after{
-    content:'·';
-    padding:0 6px
+.right li:nth-child(2)::after{
+    content:'.'
 }
 .right li img{
     position:static;

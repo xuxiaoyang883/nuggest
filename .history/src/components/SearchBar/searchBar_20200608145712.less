@@ -1,0 +1,21 @@
+@fontSize14:14px;
+.searchBar{
+    float:right;
+    .search-form{
+        height:66px;
+        position:relative;
+        & > .search-input{
+           width:95px;
+           height:28px;
+           font-size: @fontSize14;
+           color:#afb0b0;
+           padding:0 @fontSize14;
+        }
+        & > .search-icon{
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%)
+        }
+    }
+}

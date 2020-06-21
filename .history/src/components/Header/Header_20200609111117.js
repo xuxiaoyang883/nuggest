@@ -71,8 +71,6 @@ class Header extends Component {
                       </NavLink>
                     </li>
                   </ul>
-<<<<<<< HEAD
-=======
                   <SearchBar></SearchBar>
                   <ul className="right">
                       <li className="">
@@ -84,7 +82,6 @@ class Header extends Component {
                         <span>注册</span>
                       </li>
                   </ul>
->>>>>>> fdbfc1cc2255b60b09025222831f6bc5cbbd7260
                 </div>
                 <div className="content">
                   <Route path='/' component={Home} exact/>
