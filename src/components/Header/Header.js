@@ -9,6 +9,7 @@ import Pins from '../Pins/Pins';
 import Topics from '../Topics/Topics';
 import Home from '../Home/Home';
 import SearchBar from '../SearchBar/SearchBar'
+import NavText from '../NavText/NavText'
 
 //导航栏头部
 
@@ -40,6 +41,7 @@ class Header extends Component {
         <div className="Header">{ /* 组件根节点 */ }
             <BrowserRouter>
               <div className="navigator-wrap"> 
+                <header>
                 <div className="logo-wrap">
                   <img src={require('../../images/logo.jpg')} alt="" />
                   <ul className="links">
@@ -83,6 +85,8 @@ class Header extends Component {
                       </li>
                   </ul>
                 </div>
+                </header>
+                <NavText></NavText>
                 <div className="content">
                   <Route path='/' component={Home} exact/>
                   <Route path='/Pins' component={Pins} />
@@ -91,7 +95,9 @@ class Header extends Component {
                   <Route path='/Activity' component={Activity} />
                 </div>
                </div>
+              
             </BrowserRouter>
+            
         </div>
       );
     }

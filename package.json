@@ -84,6 +84,7 @@
     ]
   },
   "devDependencies": {
+    "decorator": "0.0.1",
     "less": "^3.11.3",
     "less-loader": "^6.1.0"
   },
